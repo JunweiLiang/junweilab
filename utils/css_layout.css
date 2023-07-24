@@ -98,6 +98,16 @@
     overflow: auto;
         min-width: 500px;
   }
+  #logo{
+    display: block;
+    position: absolute;
+    top:20px;
+    right:50px;
+    max-height: 80px;
+  }
+  #bio{
+    font-size:1.3em;
+  }
 
 
   #main > div.content{
