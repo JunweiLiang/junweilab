@@ -82,12 +82,7 @@
   #main{
     background: #f7f7f7;
   }
-  #main > div.publications > ol > li{
-    background: white;
-    box-shadow: 2px 5px 5px #c9c9c9;
-    margin-bottom: 10px;
-    padding: 20px;
-  }
+
   #main div.img{
     padding: 20px;
     text-align: center;
@@ -98,6 +93,19 @@
     font-size: 1.1em;
     line-height: 40px;
   }
+  #main div.demo div.imgBlock{
+    max-height: 300px;
+    min-height: 150px;
+    max-width: 500px;
+    min-width: 500px;
+    overflow: hidden;
+  }
+  #main div.demo span.title{
+    font-size: 1.2em;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
 </style>
 <div id="main">
 
@@ -106,32 +114,49 @@
   </div>
 
   <div class="content">
+    <div class="img">
+      <img src="resources/research_roadmap_012024.png"></img>
+      <div class="img_caption">Research Roadmap of the Precognition Lab (01/2024)</div>
+    </div>
     <ul>
-      <li>Research Roadmap Slides <a href="https://docs.google.com/presentation/d/1C1raWd6a0Df7ZOK8dj4ZQLld2YQ0xqDf3h2vSgLnJZg/edit?usp=sharing">[中文版]</a> [English version]</li>
-
-      <li>Machine Perception of Human Activities
+      <li>Machine Perception
         <ul>
-          <li>Efficient long-term action detection in extended videos <a href="http://openaccess.thecvf.com/content_WACVW_2020/papers/w5/Liu_Argus_Efficient_Activity_Detection_System_for_Extended_Video_Analysis_WACVW_2020_paper.pdf">[CMU-DIVA]</a></li>
-          <li>End-to-end action detection <a href="https://github.com/JunweiLiang/aicity_action">[Stargazer]</a></li>
-          <li>Multi-modal multi-dataset model co-training [<a href="https://arxiv.org/abs/2209.12362">NeurIPS'22</a>, <a href="https://arxiv.org/abs/2209.13307">NeurIPS'22</a>]</li>
-          <li>Zero-shot / Few-shot action recognition</li>
-          <li>First-person / ego-centric view action recognition & 3D action recognition & Viewpoint invariant representation [<a href="https://arxiv.org/pdf/2012.02426.pdf">Example</a>]</li>
+          <li>Efficient long-term video understanding <a href="http://openaccess.thecvf.com/content_WACVW_2020/papers/w5/Liu_Argus_Efficient_Activity_Detection_System_for_Extended_Video_Analysis_WACVW_2020_paper.pdf">[CMU-DIVA]</a></li>
+          <li>Large Multimodal Model [<a href="https://arxiv.org/abs/2209.12362">NeurIPS'22</a>, <a href="https://arxiv.org/abs/2209.13307">NeurIPS'22</a>]</li>
           <li>Learning from 3D simulation <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Liang_The_Garden_of_Forking_Paths_Towards_Multi-Future_Trajectory_Prediction_CVPR_2020_paper.pdf">[ForkingPaths]</a>, <a href="https://arxiv.org/pdf/2004.02022.pdf">[SimAug]</a>, <a href="https://github.com/JunweiLiang/Multiverse/tree/master/forking_paths_dataset">[CARLA Sim]</a></li>
         </ul>
       </li>
-      <li>Future Prediction
+      <li>Forecasting
         <ul>
           <li>
             Action Anticipation & Human Intention Prediction <a href="https://github.com/JunweiLiang/next-prediction">[Next-prediction]</a>
-            <ul>
+            <!--<ul>
               <li>Sub-direction: Predictive Self-supervised Learning</li>
-              <li>Sub-direction: Video Generation, Generative Model - Diffusion Model</li>
+              <li>Sub-direction: Diffusion Model</li>
             </ul>
+          -->
           </li>
           <li>Trajectory Prediction <a href="https://github.com/JunweiLiang/Multiverse">[Multiverse]</a></li>
-          <li>Time-series Forecasting (weather, energy, economics, etc.)</li>
+          <li>Spatial-temporal Forecasting</li>
         </ul>
       </li>
+      <li>Navigation
+        <ul>
+          <li>
+           Point/Image/Object Goal Navigation
+          </li>
+          <li>Social Navigation</li>
+        </ul>
+      </li>
+      <li>Manipulation
+        <ul>
+          <li>
+           Mobile Manipulation
+          </li>
+          <li>Whole Body Control</li>
+        </ul>
+      </li>
+      <!--
       <li>AI + X
         <ul>
           <li>Aerial Video analysis <a href="https://www.cmu.edu/news/stories/archives/2020/august/drones-hurricane-damage.html">[natural disaster assessment using drone videos - WACV’21]</a></li>
@@ -145,48 +170,92 @@
           <li>Knowledge Distillation</li>
         </ul>
       </li>
+      -->
     </ul>
 
-
-
-    <div class="img">
-      <img src="resources/project_overview_092022.jpg"></img>
-      <div class="img_caption">Figure 1. Project overview of the Precognition group (09/2022)</div>
-    </div>
   </div>
 
   <div class="title">
-    <a class="title_link" id="media" href="#media">Demos / Project Sites</a>
+    <a class="title_link" id="media" href="#demos">Demos</a>
   </div>
 
-  <div class="content">
-    <ul>
+  <div class="content demo publications">
+    <ol>
       <li>
-        <span style="font-weight: bold">ChatGPT + Robotics @Jacobi.ai</span>
-        [<a href="https://mp.weixin.qq.com/s/otlRTlOEET3ldJ3URqw8AQ">Demo1</a>]
-        [<a href="https://mp.weixin.qq.com/s/Gx65LpDEWdwBYfbP-m2Esw">Demo2</a>]
-        [<a href="https://36kr.jp/248510/">News Report</a>]
-      </li>
-      <li>
-        <span style="font-weight: bold">Pedestrian Trajectory Prediction</span>
-        [<a href="next/">Next-Prediction</a>] [<a href="next/multiverse">Multiverse</a>]
-      </li>
-      <li>
-        <span style="font-weight: bold">Efficient Action Detection</span>
-      </li>
-      <li>
-        <span style="font-weight: bold">Zero-shot Video Retrieval</span>
-      </li>
-      <li>
-        <span style="font-weight: bold">3D Event Reconstruction</span>
-        [<a href="vera3d/">VERA</a>]
-      </li>
-      <li>
-        <span style="font-weight: bold">Multimodal Question Answering</span>
-        [<a href="memexqa/">MemexQA</a>]
+        <div class="imgblock"><img src="demos/jacobi_1.gif"></img></div>
+        <span class="title">ChatGPT + Mobile Manipulation @Jacobi.ai
+        </span>
+        <!--
+        <div class="info text-success italic">authors</div>
+        <div class="info"><span class="label label-info">CVPR 2020</span> &nbsp;
+          <iframe src="https://ghbtns.com/github-btn.html?user=JunweiLiang&repo=Multiverse&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+        </div>
+        -->
+        <div class="stuff">
+          <a href="https://mp.weixin.qq.com/s/otlRTlOEET3ldJ3URqw8AQ">[Demo1]</a>
+          <a href="https://mp.weixin.qq.com/s/Gx65LpDEWdwBYfbP-m2Esw">[Demo2]</a>
+          <a href="https://36kr.jp/248510/">[Media Report]</a>
+        </div>
+        <div style="clear:both"></div>
       </li>
 
-    </ul>
+      <li>
+        <div class="imgblock"><img src="camera_ready/next.gif"></img></div>
+        <span class="title">Pedestrian Trajectory Prediction
+        </span>
+
+        <div class="stuff">
+          <a href="next/">[Next-Prediction]</a>
+          <a href="next/multiverse">[Multiverse]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+      <li>
+        <div class="imgblock"><img src="demos/Action_Demo_Page.gif"></img></div>
+        <span class="title">Efficient Action Detection
+        </span>
+
+        <div class="stuff">
+          <a href="https://github.com/JunweiLiang/aicity_action">[Stargazer]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+      <li>
+        <div class="imgblock"><img src="demos/Video_In_3D_VERA_small.gif"></img></div>
+        <span class="title">3D Event Reconstruction
+        </span>
+
+        <div class="stuff">
+          <a href="vera3d/">[VERA]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+      <li>
+        <div class="imgblock"><img src="demos/VERA_Shooter_Localization.gif"></img></div>
+        <span class="title">Shooter Localization System
+        </span>
+        <div class="info text-success italic">Best Demo Award at CBMI 2019</div>
+        <div class="stuff">
+          <a href="https://github.com/JunweiLiang/VERA_Shooter_Localization">[VERA]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+      <li>
+        <div class="imgblock"></div>
+        <span class="title">Multimodal Question Answering
+        </span>
+
+        <div class="stuff">
+          <a href="memexqa/">[MemexQA]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+    </ol>
   </div>
 
 </div>
